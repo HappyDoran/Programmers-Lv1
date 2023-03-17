@@ -1,22 +1,22 @@
 def solution(m, n, startX, startY, balls):
     answer = []
     reflect = []
-    # -3 7
+    # -3 7 왼쪽 벽
     reflect.append([-startX, startY])
-    # 17 7
+    # 17 7 오른쪽 벽
     reflect.append([2*m - startX, startY])
-    # 3 13
+    # 3 13 위쪽 벽
     reflect.append([startX, 2*n - startY])
-    # 3 -7
+    # 3 -7 아래쪽 벽
     reflect.append([startX, -startY])
-    # -3 -7
-    reflect.append([-startX, -startY])
-    # -3 13
-    reflect.append([-startX, 2*n - startY])
-    # 17 13
-    reflect.append([2*m - startX, 2*n- startY])
-    # 17 -7
-    reflect.append([2*m - startX, -startY])
+    # # -3 -7 모서리 대치
+    # reflect.append([-startX, -startY])
+    # # -3 13
+    # reflect.append([-startX, 2*n - startY])
+    # # 17 13
+    # reflect.append([2*m - startX, 2*n- startY])
+    # # 17 -7
+    # reflect.append([2*m - startX, -startY])
     
     for i in range(len(balls)):
         distance = []
